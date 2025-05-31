@@ -37,7 +37,7 @@ cd euclid-botfixed
 npm update
 
 node main.js
-
+```
 
 
 ## 🧾 License
