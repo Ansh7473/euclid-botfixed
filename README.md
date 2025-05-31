@@ -34,7 +34,7 @@ cd euclid-botfixed
 ```
 # 2. Install dependencies
 ```
-
+npm update
 
 node main.js
 
