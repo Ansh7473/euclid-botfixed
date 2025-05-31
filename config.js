@@ -7,8 +7,12 @@ export const SETTINGS = {
   RANDOM_INITIALIZATION_PAUSE: [3,8], // Initial delay for each wallet (seconds)
 };
 
-//[✗] No supported tokens with valid routes on Base Sepolia.
+
+// [✗] No supported tokens with valid routes on Base Sepolia. // [✗] No supported tokens with valid routes on Base Sepolia.  
+//[✗] No supported tokens with valid routes on Base Sepolia.  // [✗] No supported tokens with valid routes on Base Sepolia.
 //NOTE: // if no route try incresing amount 
+//NOTE: // if no route try incresing amount 
+
 export const FLOW = {
   arbitrum: {
     NUMBER_OF_SWAPS: [2, 6],
@@ -16,7 +20,7 @@ export const FLOW = {
   },
   base: {
     NUMBER_OF_SWAPS: [3, 6],
-    AMOUNT_TO_SWAP: [0.0021, 0.0022], //min 0.0018 for now  // if no route try incresing amount 
+    AMOUNT_TO_SWAP: [0.002, 0.0021], //min 0.0018 for now  // if no route try incresing amount 
   },
   ethereum_sepolia: {
     NUMBER_OF_SWAPS: [3, 6],
@@ -34,23 +38,38 @@ export const FLOW = {
     NUMBER_OF_SWAPS: [3, 6],
     AMOUNT_TO_SWAP: [0.0021, 0.0022], //min 0.0018 for now  // if no route try incresing amount 
   },
+  optimism: {
+    NUMBER_OF_SWAPS: [3, 6],
+    AMOUNT_TO_SWAP: [0.0017, 0.00172], //min 0.0018 for now  // if no route try incresing amount 
+  },
+  linea: {
+    NUMBER_OF_SWAPS: [3, 6],
+    AMOUNT_TO_SWAP: [0.0021, 0.0022], //min 0.0018 for now  // if no route try incresing amount 
+  },
+  soneium: {
+    NUMBER_OF_SWAPS: [3, 6],
+    AMOUNT_TO_SWAP: [0.0021, 0.0022], //min 0.0018 for now  // if no route try incresing amount 
+  },
 };
-            
+
  
 export const SHOW_SWAP_PENDING_LOG = {   
-  arbitrum: false,
-  base: false,               //added to manage this: //[⟳] [Base Sepolia] Swap pending (Attempt 3/10)
-  ethereum_sepolia: false,
+  arbitrum: true,
+  base: true,
+  ethereum_sepolia: true,
   monad: true,
   megaeth: true,
   somnia: true,
+  optimism: true,
+  linea: true,
+  soneium: true,
 };   
 
+export const RETRY = {
+  ATTEMPTS: 3, // Default retry attempts for all chains
+  DELAY: [3000, 5000], // Default delay between retries (ms)
+};
 
-
-
-//added bcz script stuck confirming status throught website and their web is unstable to update status 
-//reduce attemp and delay so next transaction process other wise script stuck to finalise the status of txn
 export const CHECK_SWAP_STATUS = {
   arbitrum: { MAX_ATTEMPTS: 1, DELAY: 3000 },
   base: { MAX_ATTEMPTS: 10, DELAY: 30000 },
@@ -58,16 +77,9 @@ export const CHECK_SWAP_STATUS = {
   monad: { MAX_ATTEMPTS: 2, DELAY: 30000 },
   megaeth: { MAX_ATTEMPTS: 10, DELAY: 30000 },
   somnia: { MAX_ATTEMPTS: 10, DELAY: 30000 },
-};
-
-
-
-//ignore
-
-
-export const RETRY = {
-  ATTEMPTS: 3, // Default retry attempts for all chains
-  DELAY: [3000, 5000], // Default delay between retries (ms)
+  optimism: { MAX_ATTEMPTS: 10, DELAY: 30000 },
+  linea: { MAX_ATTEMPTS: 10, DELAY: 30000 },
+  soneium: { MAX_ATTEMPTS: 10, DELAY: 30000 },
 };
 
 export const randomDelay = (min = 2000, max = 5000, context = '') => {
