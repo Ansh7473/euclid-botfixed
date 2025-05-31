@@ -8,6 +8,9 @@ import processEthereumSwap from './euclid-ethereum-sepolia.js';
 import processMonadSwap from './euclid-monad.js';
 import processMegaethSwap from './euclid-megaeth.js';
 import processSomniaSwap from './euclid-somnia.js';
+import processOptimismSwap from './euclid-optimism.js';
+import processLineaSwap from './euclid-linea.js';
+import processSoneiumSwap from './euclid-soneium.js';
 
 const rl = (await import('readline/promises')).createInterface({ input: process.stdin, output: process.stdout });
 const question = async (query) => await rl.question(query);
@@ -52,6 +55,9 @@ const chainOptions = [
   { id: '4', name: 'Monad', process: processMonadSwap, flow: FLOW.monad },
   { id: '5', name: 'MegaETH', process: processMegaethSwap, flow: FLOW.megaeth },
   { id: '6', name: 'Somnia', process: processSomniaSwap, flow: FLOW.somnia },
+  { id: '7', name: 'Optimism Sepolia', process: processOptimismSwap, flow: FLOW.optimism },
+  { id: '8', name: 'Linea Sepolia', process: processLineaSwap, flow: FLOW.linea },
+  { id: '9', name: 'Soneium Minato Testnet', process: processSoneiumSwap, flow: FLOW.soneium },
 ];
 
 async function main() {
