@@ -144,7 +144,7 @@ const processSwap = async (privateKey, swapType, numTransactions, minEthAmount, 
     euclid: 'soneium',
     usdc: 'soneium', 
     usdt: 'soneium',
-    stt: 'soneium',
+    stt: 'somnia',
     mon: 'monad'
   };
 
