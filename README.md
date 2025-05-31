@@ -8,7 +8,10 @@
 - ETH SEPOLIA
 - SOMNIA ( PAUSED FOR NOW BCZ EUCLID contract PROBLEM NOT MINE )
 - MEGAETH ( NEED fix) AVOID USAGE FOR NOW 
-- MONAD 
+- MONAD
+- SONEIUM TESTNET
+- LINEA TESTENT
+- OPTIMISM TESTNET 
 - **Task Automation**  
 
 - **Multi-Threaded Execution**  
